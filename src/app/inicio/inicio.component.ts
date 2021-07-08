@@ -52,7 +52,7 @@ export class InicioComponent implements OnInit {
      })
    }
 
-   findByidTema(){
+   findByIdTema(){
      this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
        this.tema = resp
      })
