@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class PostagemDeleteComponent implements OnInit {
     
-  postagem: Postagem =new Postagem()
+  postagem: Postagem = new Postagem()
    idPost: number
 
   constructor(
@@ -30,14 +30,18 @@ export class PostagemDeleteComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    this.idPost = this.route.snapshot.params['id']
-    this.findByIdPostagem( this.idPost)
+    let id = this.route.snapshot.params['id']
+    this.idPost = id
+    this.findByIdPostagem(id)
+    console.log(this.postagem)
+    console.log(id)
     
   }
 
   findByIdPostagem(id: number){
      this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem)=>{
        this.postagem = resp
+   
      })
   }
 
