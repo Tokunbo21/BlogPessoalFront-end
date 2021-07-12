@@ -27,6 +27,9 @@ export class InicioComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -84,7 +87,7 @@ export class InicioComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       this.postagem = resp
-      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess ('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
