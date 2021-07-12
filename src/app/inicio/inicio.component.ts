@@ -36,7 +36,7 @@ export class InicioComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService, 
-    private usuarioService: UsuarioService,
+    public usuarioService: UsuarioService,
     private alertas: AlertasService
       
     
