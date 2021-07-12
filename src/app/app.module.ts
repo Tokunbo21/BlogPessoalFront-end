@@ -46,7 +46,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot(),
+    ModalModule.forRoot(),    //ele permite que a plicação rode na raiz do sitema
     OrderModule
   ],
   providers: [{
